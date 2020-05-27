@@ -1,0 +1,82 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Source code analyzer for Java"
+        }
+      },
+      "conversion": {
+        "tool": {
+          "driver": {
+            "name": "@ShiftLeft/sast-scan"
+          }
+        },
+        "invocation": {
+          "arguments": [
+            "pmd",
+            "-no-cache",
+            "--failOnViolation",
+            "false",
+            "-language",
+            "java",
+            "-d",
+            "/app",
+            "-r",
+            "/app/reports/source-java-report.csv",
+            "-f",
+            "csv",
+            "-R",
+            "/usr/local/src/rules-pmd.xml"
+          ],
+          "executionSuccessful": true,
+          "commandLine": "pmd -no-cache --failOnViolation false -language java -d /app -r /app/reports/source-java-report.csv -f csv -R /usr/local/src/rules-pmd.xml",
+          "endTimeUtc": "2020-05-27T20:45:47Z",
+          "workingDirectory": {
+            "uri": "file:///home/zrohrbach/Documents/ShiftLeft/repos/badbadbad"
+          }
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true,
+          "endTimeUtc": "2020-05-27T20:45:47Z",
+          "workingDirectory": {
+            "uri": "file:///home/zrohrbach/Documents/ShiftLeft/repos/badbadbad"
+          }
+        }
+      ],
+      "properties": {
+        "metrics": {
+          "total": 0,
+          "critical": 0,
+          "high": 0,
+          "medium": 0,
+          "low": 0
+        }
+      },
+      "results": [],
+      "automationDetails": {
+        "description": {
+          "text": "Static Analysis Security Test results using @ShiftLeft/sast-scan"
+        },
+        "guid": "274e8bb5-9c86-4368-814a-b2b0370323df"
+      },
+      "versionControlProvenance": [
+        {
+          "branch": "master",
+          "repositoryUri": "https://github.com/zrohrbachNN/badbadbad",
+          "revisionId": "f50ac869d7ba7470c6e19dc9c3fdfb7a1f2b2914"
+        }
+      ]
+    }
+  ],
+  "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "inlineExternalProperties": [
+    {
+      "guid": "274e8bb5-9c86-4368-814a-b2b0370323df",
+      "runGuid": "5d6a8e46-4bc7-4c11-b3eb-f249541d0ddc"
+    }
+  ]
+}
